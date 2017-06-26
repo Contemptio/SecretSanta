@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import zmk.file.util.FileReadUtil;
-
 /**
  * Class for reading files.
  * 
@@ -62,6 +60,6 @@ public abstract class FileReader {
      */
     public void read(File file) throws IOException {
         this.file = file;
-        this.lines = Collections.<String>unmodifiableList(FileReadUtil.fileAsLines(file));
+        this.lines = Collections.<String>unmodifiableList(FileUtil.fileAsLines(file));
     }
 }
